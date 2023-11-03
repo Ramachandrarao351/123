@@ -1,0 +1,60 @@
+import javax.swing.*;
+import java.awt.*;
+/**
+ 
+  Flag Description:
+two equal vertical bands of green (hoist side) and white;
+a red, five-pointed star within a red crescent centered
+over the two-color boundary; the crescent, star,
+and color green are traditional symbols.
+ */
+
+public class AlgerianFlag extends JComponent{
+    public void paint( Graphics g )
+    {
+
+        Graphics2D g2 = ( Graphics2D ) g;
+        
+// draw the green space
+        g2.setColor(Color.blue); 
+        g2.fillRect(0, 0, 600, 600);
+// draw the green space
+        g2.setColor(Color.GREEN); 
+        g2.fillRect(50, 50, 150, 200);
+        
+// draw the white space
+        g2.setColor(Color.WHITE); 
+        g2.fillRect(200, 50, 150, 200);
+        
+        
+    }
+}
+
+
+and this is the test class:
+
+import javax.swing.*;
+import java.awt.*;
+
+public class AlgerianFlagTest {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        // draw the red star
+    
+//create new frame object 
+        JFrame frame = new JFrame ("Algeria");        
+// set the size of the frame
+        frame.setSize(600 ,600);
+// set the location of the frame
+        frame.setLocation(100,100);
+// create new object of type flag
+        AlgerianFlag flag = new AlgerianFlag();
+// add the object flag to the frame
+        frame.add(flag);
+//display the frame and close the program when close is pushed
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    
+    }
+            }
